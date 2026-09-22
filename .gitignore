@@ -1,0 +1,42 @@
+#old datasets
+*_Med
+
+#slurm output files
+#slurm make dataset
+make_analysis.1*
+make_ddp.1*
+make_ddp.2*
+make_ds.1*
+make_maps.1*
+make_train.1*
+make_train_parallel.1*
+
+#other files
+profiles_comparison.2*
+red_data.2*
+rem_out.1*
+
+
+#pycache
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+#folders
+files_make_ds
+boxplots
+correlation_maps
+make_ds_outputs
+make_profiles_comparison 
+OLD_scripts
+output_folders
+#evodenss/
+#evodenss-1d/
+#best_models/# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+pretrained_models
+results_trial_ddp
+ds
