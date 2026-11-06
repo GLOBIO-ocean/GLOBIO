@@ -1,17 +1,18 @@
-# Direct dependencies; versions from the globio Conda environment.
-# PyTorch CUDA 12.4 wheels.
+# Versions used for the reference runs (Python 3.11, PyTorch with CUDA 12.4).
+# Core: torch, numpy, pandas, scipy. The others are optional (see README).
 --extra-index-url https://download.pytorch.org/whl/cu124
 
 torch==2.6.0+cu124
 numpy==2.4.3
 pandas==3.0.2
 scipy==1.17.1
-statsmodels==0.14.6
-matplotlib==3.10.9
-seaborn==0.13.2
-netCDF4==1.7.4
-cartopy==0.25.0
-canyonbpy==0.4.0
 
-# Required by download_soca.py.
+# CANYON-B baseline (evaluate_global.py / evaluate_regional.py --baseline canyonb)
+canyonbpy==0.4.0
+# tools.split_dataset
+scikit-learn==1.8.0
+# tools.make_dataset and tools.download_soca
+netCDF4==1.7.4
 copernicusmarine==2.4.1
+# notebooks
+matplotlib==3.10.9

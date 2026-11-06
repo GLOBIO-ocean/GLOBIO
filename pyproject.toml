@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "globio"
+version = "1.0.0"
+description = "Prediction of biogeochemical profiles (CHLA, NITRATE, BBP700) from BGC-Argo physical profiles with 1D CNNs"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.24",
+    "pandas>=1.5",
+    "scipy>=1.9",
+]
+
+[project.optional-dependencies]
+baselines = ["canyonbpy>=0.4"]                       # CANYON-B baseline (NITRATE)
+tools = ["scikit-learn>=1.2", "netCDF4>=1.6", "copernicusmarine>=2.0"]  # dataset creation, splits, SOCA download
+notebook = ["matplotlib>=3.6", "jupyter"]
+all = ["globio[baselines,tools,notebook]"]
+
+[tool.setuptools]
+packages = ["globio"]
